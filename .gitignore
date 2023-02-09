@@ -115,3 +115,7 @@ Thumbs.db
 
 ## vscode
 .vscode/
+
+# testing
+tests/bin
+tests/build
