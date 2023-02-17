@@ -1,5 +1,4 @@
 buildscript {
-    
 
     repositories {
         mavenLocal()
@@ -70,7 +69,7 @@ project(":tests") {
     apply plugin: "java"
 
     sourceSets.test.java.srcDirs = ["src/"]
-    		
+    
     dependencies {
 
         implementation project(":core")
@@ -81,11 +80,13 @@ project(":tests") {
         implementation  "com.badlogicgames.gdx:gdx-backend-headless:$gdxVersion"
         implementation  "com.badlogicgames.gdx:gdx:$gdxVersion"
 
-        testImplementation 'junit:junit:4.+'
-        testImplementation "org.mockito:mockito-all:1.9.+"
+        testImplementation "junit:junit:4.+"
 
         testImplementation "com.badlogicgames.gdx:gdx-backend-headless:$gdxVersion"
         testImplementation "com.badlogicgames.gdx:gdx:$gdxVersion"
         testImplementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+
+        implementation "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
+        testImplementation "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
     }
 }

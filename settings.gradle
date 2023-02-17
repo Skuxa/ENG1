@@ -1,1 +1,5 @@
 include 'desktop', 'core', 'tests'
+
+if(JavaVersion.current() != JavaVersion.VERSION_17){
+    throw new GradleException("This build must be run with java 17")
+}
